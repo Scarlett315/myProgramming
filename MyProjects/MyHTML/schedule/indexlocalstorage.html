@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Homepage</title>
+        <link rel="stylesheet" href="schedule.css"/>
+    </head>
+    <div id = "header" style = background-color:#dbc5ca>
+    <br>
+    <h1>Planner</h1>
+    <p>An all-in-one planner for your daily needs!</p><br>
+    </div>
+    <div class="body">
+    <!-- Schedule for one day -->
+    <div class="column" id = "daySchedule">
+        <h2>Today's Schedule</h2>
+        <p>Block out your day and be productive!</p>
+
+        <div id = "dayScheduletbl"></div> <br>
+
+        <form id = "formAddToSchedule" hidden>
+            <br>
+            <input type="text" id="scheduleText" name="scheduleText"  placeholder="Type your event here" autocomplete="off">
+            <br>
+            <label for="scheduleTime">Time: </label>
+            <input type="time" id="scheduleTime" name="scheduleTime"> <br> <br>
+            <input type="button" value="Submit" onclick="addEventToSchedule()" />
+        </form>
+
+        <button type="button" onclick="editSchedule()">Edit Schedule</button>
+        <button type="button" onclick="clearSchedule()">Clear all events</button>
+    </div>
+
+    <!-- To-Do List -->
+    <div class="column" id = "to-do" style = text-align:center>
+        <h2>To-Do List</h2>
+        <p>A to-do list for the short term!</p><br>
+        <ul id="todoLi"></ul>
+
+        <br><br>
+        <form id = "todoLiForm" onkeypress="return event.keyCode != 13"> <!--input form-->
+        <input type="text" id="todoInput" placeholder="add something to do here..." style = width:60% autocomplete = "off"><br><br>
+        <button type="button" onclick="addToDoItem()" class="centered">Add item</button>
+        </form>
+    </div>
+
+    </div>
+    <div id = "footer">
+        <button type="button" onclick="saveData">Save</button>
+        <script src="withlocalstorage.js"></script>
+    </div>
+</html>

@@ -1,0 +1,118 @@
+:root {
+    --main-bg-color: brown;
+    --header-font: "Brush Script MT";
+    --body-font: "Times New Roman";
+    --color-1:#e5e5dc;
+    --color-2:#c66b3d;
+    --color-3:#26495c;
+
+  }
+body{
+    background-color:var(--color-1) ;
+}
+
+  /* Column arrangement */
+.column{
+    float: left;
+    width: 50%;
+  }
+
+  
+.body:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+h1, h2{
+    color:var(--color-3);
+    font-family: var(--header-font);
+    text-align:center;
+}
+
+p, button{
+    text-align:center;
+    color:var(--color-2);
+    font-family: var(--body-font);
+     
+}
+
+ul{
+    text-align:left;
+    color:var(--color-2);
+    font-family: var(--body-font);
+}
+
+.centered{
+    margin: 0 auto;
+    display: block;
+}
+
+
+table, th, td {
+    border: 1px solid var(--color-3);
+    border-collapse:collapse;
+    font-family: var(--body-font);
+    color:#8a4827;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+th, td {
+    background-color: #f1f1ec;
+}
+
+/*To-Do List*/
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    font-size: 18px;
+    transition: 0.2s;
+
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+ul {
+    margin: 0;
+    padding: 0;
+  }
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+    text-decoration: line-through;
+  }
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: var(--color-2);
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+  
+  
+  /* Style the close button */
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 6px 8px 6px 8px;
+  }
+  
+  .close:hover {
+    background-color: #eed7d5;
+    color: white;
+  }
