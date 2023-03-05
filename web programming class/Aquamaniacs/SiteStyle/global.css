@@ -1,0 +1,152 @@
+body{
+    font-family: Verdana, Helvectica, Arial, sans-serif;
+    color: #000000;
+    font-size: 0.9em;
+    font-weight:normal;
+    padding: 0;
+    margin: 0;
+    background: #FFFFFF url(octopus.png) no-repeat right bottom;
+    background-size: contain;
+}
+
+
+em{
+    font-size:20px;
+    font-style:normal;
+    color:red;
+}
+
+i{
+    font-size:20px;
+    color:purple;
+}
+
+strong{
+    font-size:25px;
+    font-weight:normal;
+    color:blue;
+}
+
+b{
+font-size: 30px; color: green;
+}
+
+p{
+    background-color:white;
+    color:black;
+
+}
+
+h1{
+    color: #832371;
+}
+
+.annnotated{
+    position:relative;
+}
+.annotated ul{
+    list-style:none;
+    position:absolute;
+    top:0;
+    left:0;
+    font-size:16px;
+}
+.annotated li{
+    position:absolute;
+    width:50px;
+    height:40px;
+    /*padding:5px;*/
+    background-color:rgba(255,255,255,0.8)
+    text-indent:-9999px;
+}
+
+.annotated:hover li{
+    border:2px solid black;
+    background-color:rgba(255,255,255,0.8)
+}
+
+.annotated li:hover{
+    background-color:white;
+    text-indent:0px;
+    cursor:default;
+}
+
+video{
+    float: left;
+    margin: 0 15px 10px 0;
+    padding: 10px;
+    border:4px solid #CCCCCC;
+    background-color: black;
+}
+
+
+ #gradient1,#gradient2,#gradient3,#gradient4,#gradient5,#gradient6 {
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid #CCCCCC;
+    border-radius: 25px;
+    box-shadow: 8px 8px 7px rgba(0,0,0,0.6);
+    font-weight: bold;
+    text-align:center;
+    font-size:large;
+ }
+
+ #gradient1 {
+ background-image:url("fish.png"),
+ linear-gradient(red, yellow);
+ background-repeat: no-repeat;
+ background-position: right bottom;
+ }
+ 
+#gradient4 {
+ background-image:url("fish.png"),
+ radial-gradient(pink,blue);
+ background-repeat: no-repeat;
+ background-position:right bottom;
+ }
+ 
+ #fish1,#fish2,#fish3,#fish4 {
+width: 100px;
+height: 80px;
+float: left;
+margin: 5px;
+padding: 5px;
+border: 2px solid #CCCCCC;
+border-radius: 25px;
+box-shadow: 8px 8px 7px rgba(0,0,0,0.6);
+font-weight: bold;
+text-align: center;
+font-size: 12px;
+background-color: #FFFFFF;
+background-repeat: no-repeat;
+background-size: contain;
+background-position: bottom;
+}
+
+
+
+#fish1 {
+    background-image:url("fish1.jpg");
+}
+#fish2 {
+    background-image:url("fish2.jpg");
+}
+#fish3 {
+    background-image:url("fish3.jpg");
+}
+#fish4 {
+    background-image:url("fish4.jpg");
+}
+
+#fish1:hover{
+    transform:translate(80px, 50px);
+    -webkit-transform: translate(80px, 50px);
+}
+
+#fish2:hover{
+    transform:rotate(40deg);
+    -webkit-transform: transform:rotate(40deg);
+}
